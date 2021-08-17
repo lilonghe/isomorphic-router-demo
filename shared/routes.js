@@ -10,7 +10,12 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: Home
+        component: Home,
+        loadData: () => new Promise((resolve) => {
+          setTimeout(() => {
+            resolve({ name: 'xiaoming' });
+          }, 2000);
+        })
       },
       {
         path: '/about',

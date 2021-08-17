@@ -2,7 +2,7 @@
   "name": "isomorphic-router-demo",
   "private": true,
   "version": "1.0.0",
-  "author": "xiaoyunyang",
+  "author": "lilonghe",
   "license": "MIT",
   "scripts": {
     "build:prod": "./node_modules/.bin/webpack --mode production",

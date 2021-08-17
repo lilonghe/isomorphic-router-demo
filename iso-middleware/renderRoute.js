@@ -20,14 +20,14 @@ export default function renderRoute(req, res) {
   Promise.all(promises).then(data => {
     // data will be an array[] of datas returned by each promises.
     // // console.log(data)
-
+    const finalRouteData = data[0];
     const context = data.reduce((context, data) => Object.assign(context, data), {});
 
     const router = <StaticRouter location={req.url} context={context}><App /></StaticRouter>;
 
     const app = renderToString(router);
 
-    const html = renderToString(<HTML html={app} />);
+    const html = renderToString(<HTML html={app} serverState={finalRouteData} />);
 
     // console.log(chalk.green(`<!DOCTYPE html>${html}`));
 

@@ -16,8 +16,7 @@ const HTML = (props) => (
       />
       <script dangerouslySetInnerHTML={{
           __html:
-            `window.__SERIALIZED_STATE__ =
-              JSON.stringify(${props.serverState})`
+            `window.__SERIALIZED_STATE__ = ${JSON.stringify(props.serverState)}`
         }}
       />
     <script type="application/javascript" src="/main.bundle.js" />
