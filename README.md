@@ -4,7 +4,7 @@
 To try out the app:
 
 ```
-$ git clone https://github.com/xiaoyunyang/isomorphic-router-demo.git
+$ git clone https://github.com/lilonghe/isomorphic-router-demo.git
 $ cd isomorphic-router-demo
 $ npm install
 $ npm start
@@ -13,6 +13,9 @@ $ npm start
 Go to [http://localhost:3000](http://localhost:3000) to get the code up and running
 
 To learn more about this repo and what an isomorphic app: [https://hackernoon.com/get-an-isomorphic-web-app-up-and-running-in-5-minutes-72da028c15dd](https://hackernoon.com/get-an-isomorphic-web-app-up-and-running-in-5-minutes-72da028c15dd)  
+
+## Demo
+![demo](./demo/1.png)
 
 ## Motivation
 
