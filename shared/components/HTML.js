@@ -1,15 +1,11 @@
 import React from 'react';
 
 const HTML = (props) => (
-  <html lang="en">
-    <head>
-      <title>Isomorphic Router Demo</title>
-      <link
+    <body>
+    <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
       />
-    </head>
-    <body>
       <div
         id="root"
         dangerouslySetInnerHTML={{ __html: props.html }}
@@ -21,7 +17,6 @@ const HTML = (props) => (
       />
     <script type="application/javascript" src="/main.bundle.js" />
     </body>
-  </html>
 );
 
 export default HTML;

@@ -14,7 +14,7 @@ const routes = [
         loadData: () => new Promise((resolve) => {
           setTimeout(() => {
             resolve({ name: 'xiaoming' });
-          }, 2000);
+          }, 200);
         })
       },
       {

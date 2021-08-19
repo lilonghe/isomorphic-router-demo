@@ -6,6 +6,7 @@ import { matchRoutes } from 'react-router-config';
 import routes from '../shared/routes';
 import HTML from '../shared/components/HTML';
 import App from '../shared/App';
+import { Helmet } from 'react-helmet';
 
 export default function renderRoute(req, res) {
   const branch = matchRoutes(routes, req.url);
@@ -28,9 +29,18 @@ export default function renderRoute(req, res) {
     const app = renderToString(router);
 
     const html = renderToString(<HTML html={app} serverState={finalRouteData} />);
+    
+    const helmet = Helmet.renderStatic();
 
     // console.log(chalk.green(`<!DOCTYPE html>${html}`));
 
-    return res.send(`<!DOCTYPE html>${html}`);
+    return res.send(`<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        ${helmet.title.toString()}
+        ${helmet.meta.toString()}
+        ${helmet.link.toString()}
+      </head>
+    ${html}`);
   });
 }
